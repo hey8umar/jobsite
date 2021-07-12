@@ -3,5 +3,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("<str:job>", views.index)
+    path("", views.index),
+    path("<str:job>", views.job, name="jobs")
 ]
+

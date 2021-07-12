@@ -10,7 +10,13 @@ jobs = {
     "fifth": "do you care at this stage?" 
 }
 
-def index(request, job):
+# get all the jobs
+def index(request):
+    return HttpResponse("index page")
+
+
+# show one job
+def job(request, job):
     try:
         getJob = jobs[job] 
         return HttpResponse("Hello " + getJob)
